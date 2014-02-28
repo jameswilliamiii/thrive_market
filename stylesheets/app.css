@@ -7,12 +7,12 @@ h1.coming_soon {
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 3.5rem;
-  margin-top: 1.0em;
+  margin-top: 1.0rem;
 }
 .center {
   text-align: center;
 }
 .coming-soon-logo {
-  margin-top: 50px;
+  margin-top: 1rem;
   width: 350px;
 }
