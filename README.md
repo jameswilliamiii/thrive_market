@@ -1,1 +1,0 @@
-Simple Sinatra app to handle text messages for a community garden survey.
