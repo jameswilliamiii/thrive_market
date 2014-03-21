@@ -1,0 +1,22 @@
+<div class="contain-to-grid fixed">
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <%= link_to root_url do %>
+          <%= image_tag 'thrive_logo_nav.svg', alt: "Thrive Logo", class: "top-bar-logo" %>
+        <% end %>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li><%= link_to "ABOUT", "#" %></li>
+        <li><%= link_to "SURVEY", "#" %></li>
+        <li><%= link_to "BLOG", "#" %></li>
+        <li><%= link_to "CONTACT", "#" %></li>
+      </ul>
+    </section>
+  </nav>
+</div>
