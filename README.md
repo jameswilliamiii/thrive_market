@@ -8,8 +8,10 @@
 * Twilio for admins to SMS contacts with updates and reminders
 * Basic user auth for admins
 
+---
+
 ### Contributors:
-James Stubblefield @jameswilliamiii
+James Stubblefield [@jameswilliamiii](https://twitter.com/jameswilliamiii)
 
 
 
