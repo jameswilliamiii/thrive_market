@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-ThriveMarket::Application.config.secret_key_base = 'e66e48d2d187eb5f155a7c85dd7f842bcd8fc137d78772e97841c4878dbba3fc440694a6aa7d6c5f29a9fc83e9a9522c785f408d60f88a490aee87cb88d3b22e'
+ThriveMarket::Application.config.secret_key_base = ENV['SECRET_TOKEN']
