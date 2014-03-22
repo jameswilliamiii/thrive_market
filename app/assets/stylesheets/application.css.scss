@@ -50,9 +50,6 @@ div.home-image {
   }
   .logo {
     margin:20px 0 0;
-    @media #{$small-only} {
-      width:225px !important;
-    }
   }
   .learn-more {
     margin-top: 20px;
