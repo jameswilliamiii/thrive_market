@@ -15,8 +15,11 @@
  */
 
 @import 'foundation_and_overrides';
+@import "font-awesome";
 
 body { background-color: black; }
+
+body.f-topbar-fixed { padding:0;}
 
 .top-bar-logo {
   margin: 10px 5px 10px 5px;
@@ -26,9 +29,13 @@ body { background-color: black; }
   color: #FFF;
 }
 .section {
-  padding: 30px 0 30px;
+  padding: 60px 0 60px;
+  border-bottom: 1px dashed #555;
 }
 
 .black {
-  background-color: #222;
+  background-color: #333;
+}
+.center {
+  text-align: center;
 }

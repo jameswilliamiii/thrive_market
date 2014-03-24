@@ -1,11 +1,110 @@
-<div class="section about", id="about">
+<div class="home-image f-topbar-fixed">
   <div class="row">
-    <div class="large-5 columns">
-      <%= image_tag "cultivating.svg", class: "icon" %>
-    </div>
-    <div class="large-7 columns">
-
+    <div class="medium-12 columns">
+      <div class="logo-wrapper">
+        <%= image_tag "logo.svg", alt: "Thrive Logo", class: "logo" %>
+      </div>
+      <h2 class="uvp">Cultivating community by growing affordable local produce and sharing ideas for healthy living.</h2>
+      <%= link_to "Learn More", "#about", class: "button radius learn-more smooth" %>
     </div>
   </div>
 </div>
-<h1 class="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, repellat, id ipsum vitae veritatis dolorum quas officia error sequi cupiditate tempore ut quaerat explicabo consequatur iusto eveniet tenetur cum eaque.lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam natus animi ratione saepe tenetur veritatis nulla inventore pariatur voluptas ad. Quisquam, et velit in sed officiis accusamus perferendis ipsum laborum!</h1>
+<div class="section black about", id="about">
+  <div class="row">
+    <div class="medium-5 columns center">
+      <%= image_tag "cultivating.svg", class: "icon" %>
+    </div>
+    <div class="medium-7 columns">
+      <h3 class="white">Helping our neighbors</h3>
+      <p class="white">
+        The Thrive Neighborhood Market & Community Garden provides affordable fresh produce to our community through our monthly farmers markets and community garden located at St. Paul's Episcopal Chucrch in DeKalb, IL.
+      </p>
+      <div class="arrow-down">
+        <%= link_to "#community", class: "smooth arrow-down" do %>
+          <span class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-angle-down fa-stack-1x"></i>
+          </span>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section black about", id="community">
+  <div class="row">
+    <div class="medium-5 medium-push-7 columns center">
+      <%= image_tag "community_garden.svg", class: "icon" %>
+    </div>
+    <div class="medium-7 medium pull-5 columns">
+      <h3 class="white">Community supported</h3>
+      <p class="white">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, earum, recusandae itaque ipsa provident atque inventore repellat odio explicabo vel nam officiis quaerat et minus ea cumque omnis nostrum quos!
+      </p>
+      <div class="arrow-down">
+        <%= link_to "#healthy", class: "smooth arrow-down" do %>
+          <span class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-angle-down fa-stack-1x"></i>
+          </span>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section black about", id="healthy">
+  <div class="row">
+    <div class="medium-5 columns center">
+      <%= image_tag "healthy.svg", class: "icon" %>
+    </div>
+    <div class="medium-7 columns">
+      <h3 class="white">Promoting healthy living</h3>
+      <p class="white">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, earum, recusandae itaque ipsa provident atque inventore repellat odio explicabo vel nam officiis quaerat et minus ea cumque omnis nostrum quos!
+      </p>
+      <div class="arrow-down">
+        <%= link_to "#about", class: "smooth arrow-down" do %>
+          <span class="fa-stack fa-2x">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-angle-down fa-stack-1x"></i>
+          </span>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section black about", id="sponsors">
+  <div class="row">
+    <div class="medium-12 columns sponsors">
+      <h3 class="white">Our community sponsors:</h3>
+      <ul class="small-block-grid-2">
+        <li class="center">
+          <%= image_tag "st_pauls_logo.png" %>
+          <p class="white">St. Paul's Episcopal Church</p>
+          <p class="center">
+            <%= link_to "http://www.stpaulsdekalb.org/", class: "social-links" do %>
+              <%= fa_icon "home" %>
+            <% end %>
+            <%= link_to "https://www.facebook.com/pages/St-Pauls-Episcopal-Church-DeKalb-IL/115550275180279", class: "social-links" do %>
+              <%= fa_icon "facebook" %>
+            <% end %>
+            <%= link_to "https://twitter.com/stpaulsdekalb", class: "social-links" do %>
+              <%= fa_icon "twitter" %>
+            <% end %>
+          </p>
+        </li>
+        <li class="center">
+          <%= image_tag "dccg_logo.png" %>
+          <p class="white">DeKalb County Community Gardens</p>
+          <p class="center">
+            <%= link_to "http://dekalbgardens.org/", class: "social-links" do %>
+              <%= fa_icon "home" %>
+            <% end %>
+            <%= link_to "https://www.facebook.com/pages/DeKalb-County-Community-Gardens/172974836084982", class: "social-links" do %>
+              <%= fa_icon "facebook" %>
+            <% end %>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

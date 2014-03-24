@@ -13,24 +13,7 @@
   </head>
 
   <body>
-    <div class="show-for-small">
-      <%= render 'layouts/navigation' %>
-    </div>
-    <div class="home-image">
-      <div class="row">
-        <div class="large-12 columns">
-          <div class="logo-wrapper">
-            <%= image_tag "logo.svg", alt: "Thrive Logo", class: "logo" %>
-          </div>
-          <h2 class="uvp">Cultivating community by growing affordable local produce and sharing ideas for healthy living.</h2>
-          <%= link_to "Learn More", "#about", class: "button radius learn-more smooth" %>
-        </div>
-      </div>
-    </div>
-    <div class="hide-for-small">
-      <%= render 'layouts/navigation' %>
-    </div>
-
+    <%= render 'layouts/navigation' %>
     <%= yield %>
     <%= javascript_include_tag "application" %>
   </body>

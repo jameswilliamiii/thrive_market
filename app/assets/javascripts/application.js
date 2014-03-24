@@ -17,10 +17,17 @@
 
 $(function(){ $(document).foundation();
   // Smooth scroll
+  // Close mobile menu first
+  $('nav a.smooth').click(function(){
+    $('#nav').addClass("fixed");
+    $('nav').removeClass("expanded");
+  });
+  // Start smooth scroll
   $('a.smooth').click(function(){
       $('html, body').animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top - 65
       }, 500);
       return false;
   });
+
 });

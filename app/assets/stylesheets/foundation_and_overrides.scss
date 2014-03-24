@@ -163,8 +163,8 @@
 
 // We use these to style anchors
 // $anchor-text-decoration: none;
-// $anchor-font-color: $primary-color;
-// $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
+$anchor-font-color: #37C300;
+$anchor-font-color-hover: lighten($anchor-font-color, 14%);
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
@@ -1130,7 +1130,7 @@
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-$topbar-bg-color: #222;
+$topbar-bg-color: #111;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
@@ -1142,9 +1142,9 @@ $topbar-height: 65px;
 // $topbar-title-font-size: rem-calc(17);
 
 // Style the top bar dropdown elements
-$topbar-dropdown-bg: #222;
+$topbar-dropdown-bg: #111;
 $topbar-dropdown-link-color: #37C300;
-$topbar-dropdown-link-bg: #222;
+$topbar-dropdown-link-bg: #111;
 // $topbar-dropdown-link-weight: normal;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: #fff;
@@ -1158,7 +1158,7 @@ $topbar-link-color-hover: darken($topbar-link-color, 10%);
 // $topbar-link-weight: normal;
 // $topbar-link-font-size: rem-calc(13);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
-$topbar-link-bg-hover: #333;
+$topbar-link-bg-hover: #222;
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
 // $topbar-link-font-family: $body-font-family;
@@ -1172,7 +1172,7 @@ $topbar-link-bg-hover: #333;
 // $topbar-dropdown-label-text-transform: uppercase;
 // $topbar-dropdown-label-font-weight: bold;
 // $topbar-dropdown-label-font-size: rem-calc(10);
-// $topbar-dropdown-label-bg: #333;
+$topbar-dropdown-label-bg: #222;
 
 // Top menu icon styles
 // $topbar-menu-link-transform: uppercase;
@@ -1242,6 +1242,6 @@ $topbar-link-bg-hover: #333;
 @import 'foundation';
 
 .contain-to-grid {
-  opacity:0.96;
-  filter:alpha(opacity=96); /* For IE8 and earlier */;
+  opacity:0.95;
+  filter:alpha(opacity=95); /* For IE8 and earlier */;
 }
