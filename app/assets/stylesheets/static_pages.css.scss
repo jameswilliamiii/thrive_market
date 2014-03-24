@@ -7,12 +7,14 @@
 div.home-image {
   background: url('https://s3.amazonaws.com/thrivemarket.org/images/background.jpg') center center no-repeat;
   background-size: cover;
-  height: calc(100% - 65px);
   text-align: center;
   position:relative;
-  // @media #{$small-only} {
-  //   height: 540px;
-  // }
+  @media #{$medium-up} {
+    height: calc(100% - 65px);
+  }
+  @media #{$small-only} {
+    height: 540px;
+  }
   .uvp {
     font-family: 'Open Sans', sans-serif;
     font-size: 3.0rem;
