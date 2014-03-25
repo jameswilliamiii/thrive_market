@@ -56,10 +56,8 @@ div.home-image {
   }
   h3 {
     font-family: 'Open Sans', sans-serif;
-    margin-top: 30px;
     font-weight: 200;
     letter-spacing: 2px;
-    text-align: center;
     @media #{$medium-up} {
       text-align: left;
     }
@@ -71,7 +69,10 @@ div.home-image {
       margin-left: 100px;
     }
   }
-  h3.center { text-align: center; }
+  h3.center {
+    text-align: center;
+    margin-top: 0;
+  }
   a.arrow-down {
     color:white;
     .fa-circle {
@@ -147,11 +148,13 @@ div.dates {
     }
   }
 }
-div.phone-wrapper {
+div.form-wrapper {
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
-  display: inline-block;
+}
+.phone-wrapper {
+  display: table;
 }
 input.large-font {
   font-size: 1.5rem;

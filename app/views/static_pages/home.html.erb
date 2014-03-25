@@ -17,7 +17,11 @@
     <div class="medium-7 columns">
       <h3 class="white">Helping our neighbors</h3>
       <p class="white">
-        The Thrive Neighborhood Market & Community Garden provides affordable fresh produce to our community through our monthly farmers markets and community garden located at St. Paul's Episcopal Chucrch in DeKalb, IL.
+        The Thrive Neighborhood Market & Community Garden provides affordable fresh produce to our community through our monthly farmers markets and community garden located at St. Paul's Episcopal Church, 900 Normal Rd, in DeKalb, IL.
+        <br>
+        <%= link_to "https://www.google.com/maps/preview?q=900+Normal+Road,+DeKalb,+IL&hl=en&sll=41.928177,-88.746305&sspn=0.226052,0.528374&oq=900+Normal+Road&hnear=900+Normal+Rd,+DeKalb,+Illinois+60115&t=m&z=17", target: "new" do %>
+          <%= fa_icon "map-marker" %> Do you need directions?
+        <% end %>
       </p>
       <div class="arrow-down">
         <%= link_to "#community", class: "smooth arrow-down" do %>
@@ -76,6 +80,9 @@
   <div class="row">
     <div class="large-12 small-8 small-centered medium-8 medium-centered columns center">
       <h3 class="center">Market Dates</h3>
+      <h5 class="center">
+        Join us at <%= link_to "St. Paul's Episcopal Church", "http://stpaulsdekalb.org/" %> on each of the following days.
+      </h5>
       <div class="dates">
         <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
           <li>
@@ -116,9 +123,13 @@
           </li>
         </ul>
       </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-10 medium-centered columns">
       <h3 class="center">Enter your phone number to receive SMS updates</h3>
-      <%= form_tag "sms_updates" do %>
-        <div class="phone-wrapper">
+      <div class="form-wrapper phone-wrapper">
+        <%= form_tag "sms_updates" do %>
           <div class="row">
             <div class="medium-7 columns">
               <%= telephone_field_tag :number, nil, placeholder: "XXX-XXX-XXXX", class: "large-font" %>
@@ -127,8 +138,8 @@
               <%= submit_tag "SIGN UP", class: "button learn-more radius expand" %>
             </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
@@ -165,6 +176,32 @@
           </p>
         </li>
       </ul>
+    </div>
+  </div>
+</div>
+<div class="section about dashed-border", id="contact">
+  <div class="row">
+    <div class="medium-12 columns">
+      <h3 class="center">Do you have questions, suggestions, or feedback?</h3>
+      <div class="form-wrapper">
+        <%= form_tag "contact_form" do %>
+        <div class="row">
+          <div class="medium-4 medium-offset-2 small-11 small-centered columns">
+            <%= email_field_tag :email, nil, placeholder: "Email" %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="medium-8 medium-centered small-11 small-centered columns">
+            <%= text_area_tag :content, nil, placeholder: "Enter your message here", rows: 4 %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="medium-4 medium-offset-2 large-3 small-11 small-centered columns">
+            <%= submit_tag "SEND MESSAGE", class: "button learn-more radius expand" %>
+          </div>
+        </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
