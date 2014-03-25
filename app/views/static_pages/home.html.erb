@@ -1,6 +1,7 @@
 <div class="home-image f-topbar-fixed">
   <div class="row">
     <div class="medium-12 columns">
+      <%= render 'layouts/messages' %>
       <div class="logo-wrapper">
         <%= image_tag "logo.svg", alt: "Thrive Logo", class: "logo" %>
       </div>
@@ -184,19 +185,20 @@
     <div class="medium-12 columns">
       <h3 class="center">Do you have questions, suggestions, or feedback?</h3>
       <div class="form-wrapper">
-        <%= form_tag "contact_form" do %>
+        <%= form_tag "http://api.formspree.com/jameswilliamiii@gmail.com" do %>
         <div class="row">
           <div class="medium-4 medium-offset-2 small-11 small-centered columns">
-            <%= email_field_tag :email, nil, placeholder: "Email" %>
+            <%= email_field_tag :email, nil, placeholder: "Email", name: "_replyto" %>
           </div>
         </div>
         <div class="row">
           <div class="medium-8 medium-centered small-11 small-centered columns">
-            <%= text_area_tag :content, nil, placeholder: "Enter your message here", rows: 4 %>
+            <%= text_area_tag :content, nil, placeholder: "Enter your message here", rows: 4, name: "content" %>
           </div>
         </div>
         <div class="row">
           <div class="medium-4 medium-offset-2 large-3 small-11 small-centered columns">
+            <input type="hidden" name="_next" value="//localhost:3000<%= thanks_path %>" />
             <%= submit_tag "SEND MESSAGE", class: "button learn-more radius expand" %>
           </div>
         </div>

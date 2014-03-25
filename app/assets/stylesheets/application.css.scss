@@ -70,6 +70,9 @@ body.f-topbar-fixed { padding:0;}
   &:hover {
     background-color: darken(#FF852A, 10%);
   }
+  &:focus {
+    background-color: darken(#FF852A, 10%);
+  }
 }
 .light-gray {
   color:#BBB;
@@ -79,4 +82,8 @@ footer {
   p {
     margin-bottom: 0;
   }
+}
+div.message-wrapper {
+  margin-top: 10px;
+  text-align: left;
 }
