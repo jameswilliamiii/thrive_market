@@ -157,7 +157,9 @@ input.large-font {
   font-size: 1.5rem;
   height: 3.4rem;
   border: none;
-  border-bottom: 2px dotted #333;
+  border-bottom: 2px dotted #BBB;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
   text-align: center
