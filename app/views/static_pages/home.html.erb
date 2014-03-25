@@ -30,20 +30,20 @@
     </div>
   </div>
 </div>
-<div class="section black about", id="community">
+<div class="section about dashed-border", id="community">
   <div class="row">
     <div class="medium-5 medium-push-7 columns center">
       <%= image_tag "community_garden.svg", class: "icon" %>
     </div>
     <div class="medium-7 medium pull-5 columns">
-      <h3 class="white">Community supported</h3>
-      <p class="white">
+      <h3>Community supported</h3>
+      <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, earum, recusandae itaque ipsa provident atque inventore repellat odio explicabo vel nam officiis quaerat et minus ea cumque omnis nostrum quos!
       </p>
       <div class="arrow-down">
         <%= link_to "#healthy", class: "smooth arrow-down" do %>
           <span class="fa-stack fa-2x">
-            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-circle white-bg fa-stack-2x"></i>
             <i class="fa fa-angle-down fa-stack-1x"></i>
           </span>
         <% end %>
@@ -62,13 +62,73 @@
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, earum, recusandae itaque ipsa provident atque inventore repellat odio explicabo vel nam officiis quaerat et minus ea cumque omnis nostrum quos!
       </p>
       <div class="arrow-down">
-        <%= link_to "#sponsors", class: "smooth arrow-down" do %>
+        <%= link_to "#when", class: "smooth arrow-down" do %>
           <span class="fa-stack fa-2x">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-angle-down fa-stack-1x"></i>
           </span>
         <% end %>
       </div>
+    </div>
+  </div>
+</div>
+<div class="section about dashed-border", id="when">
+  <div class="row">
+    <div class="large-12 small-7 small-centered medium-8 medium-centered columns center">
+      <h3 class="center">Market Dates</h3>
+      <div class="dates">
+        <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
+          <li>
+            <div class="month radius">
+              <p>June</p>
+            </div>
+            <div class="day">
+              <p>28</p>
+              <small>11AM - 2PM</small>
+            </div>
+          </li>
+          <li>
+            <div class="month radius">
+              <p>July</p>
+            </div>
+            <div class="day">
+              <p>26</p>
+              <small>11AM - 2PM</small>
+            </div>
+          </li>
+          <li>
+            <div class="month radius">
+              <p>Aug</p>
+            </div>
+            <div class="day">
+              <p>23</p>
+              <small>11AM - 2PM</small>
+            </div>
+          </li>
+          <li>
+            <div class="month radius">
+              <p>Sept</p>
+            </div>
+            <div class="day">
+              <p>27</p>
+              <small>11AM - 2PM</small>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <h3 class="center">Enter your phone number to receive SMS updates</h3>
+      <%= form_tag "sms_updates" do %>
+        <div class="phone-wrapper">
+          <div class="row">
+            <div class="medium-6 columns">
+              <%= telephone_field_tag :number, nil, placeholder: "XXX-XXX-XXXX", class: "large-font" %>
+            </div>
+            <div class="medium-4 small-12 columns end">
+              <%= submit_tag "SIGN UP", class: "button learn-more radius expand" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

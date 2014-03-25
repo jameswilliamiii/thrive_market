@@ -42,31 +42,8 @@ div.home-image {
   }
   .learn-more {
     margin-top: 20px;
-    text-shadow: 0 1px rgba(0, 0, 0, 0.4);
-    color: #fff;
-    display:inline-block;
-    vertical-align: middle;
-    text-align: center;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.1s ease-in-out;
-    -webkit-transition: background 0.1s ease-in-out;
-    -moz-transition: background 0.1s ease-in-out;
-    -ms-transition: background 0.1s ease-in-out;
-    -o-transition: background 0.1s ease-in-out;
-    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-    background-color: #FF852A;
-    box-shadow: 0px 3px 0px 0px darken(#FF852A, 25%);
-    text-transform: uppercase;
-    @media #{$small-only} {
-      padding: 0.65rem 1.0rem 0.70rem;
-      font-size: 1rem;
-    }
     @media #{$large-up} {
       margin-top: 35px;
-    }
-    &:hover {
-      background-color: darken(#FF852A, 10%);
     }
   }
 }
@@ -94,10 +71,14 @@ div.home-image {
       margin-left: 100px;
     }
   }
+  h3.center { text-align: center; }
   a.arrow-down {
     color:white;
     .fa-circle {
       color: rgba(55, 195, 0, 0.30);
+    }
+    .fa-circle.white-bg {
+      color: rgba(55, 195, 0, 0.60);
     }
     .fa-angle-down {
       color:white;
@@ -143,4 +124,41 @@ div.sponsors {
     margin-right: 20px;
     font-size: 1.5rem;
   }
+}
+div.dates {
+  margin-top: 30px;
+  .month {
+    background-color: rgb(227, 103, 103);
+    padding: 10px 0;
+    p {
+      margin: 0;
+      color: white;
+      font-size: 1.5rem;
+    }
+  }
+  .day {
+    background-color: #EEE;
+    padding: 20px;
+    margin-bottom: 30px;
+    p {
+      margin-bottom: 0;
+      font-size: 4rem;
+      line-height: 1;
+    }
+  }
+}
+div.phone-wrapper {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+}
+input.large-font {
+  font-size: 1.5rem;
+  height: 3.4rem;
+  border: none;
+  border-bottom: 2px dotted #333;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-align: center
 }
