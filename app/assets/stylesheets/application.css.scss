@@ -14,8 +14,7 @@
  *= require_tree .
  */
 
-@import 'foundation_and_overrides';
-@import "font-awesome";
+@import 'foundation_and_overrides', 'font-awesome', 'static_pages';
 
 body { background-color: black; }
 
