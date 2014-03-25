@@ -58,6 +58,7 @@ div.home-image {
     font-family: 'Open Sans', sans-serif;
     font-weight: 200;
     letter-spacing: 2px;
+    margin-bottom: 20px;
     @media #{$medium-up} {
       text-align: left;
     }
@@ -105,6 +106,7 @@ div.home-image {
   .icon {
     width: 200px;
     height: auto;
+    margin-bottom: 30px;
     @media #{$medium-up} {
       width: 250px;
       height: auto;
