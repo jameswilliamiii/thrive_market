@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+//= require jquery.cookie
 //= require_tree .
 
 $(function(){ $(document).foundation();
@@ -29,5 +30,15 @@ $(function(){ $(document).foundation();
       }, 500);
       return false;
   });
+  // Set cookie for survey
+  // $('.survey_button').click(function(){
+  //   $.cookie('survey_taken', 'true')
+  //   return false;
+  // });
+  // Fire modal on home page
+
+
+  // alert($.cookie());
+  $('#myModal').foundation('reveal', 'open');
 
 });

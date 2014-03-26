@@ -1,0 +1,19 @@
+<div id="myModal" class="reveal-modal" data-reveal>
+  <div class="medium-8 medium-centered columns">
+    <h1 style="color:red"><%= session[:survey_taken] %></h1>
+    <h3>Is there something you would like to see us grow in our garden?</h3>
+    <p>
+      It getting close to that time of the year where we will start planting our garden. Tell us what you would like to see planted.
+    </p>
+    <%= form_for @survey_item do |f| %>
+      <%= f.label :message do %>
+        What would you like to see grown in our garden?
+      <% end %>
+      <%= f.text_area :message, rows: 3 %>
+      <%= f.submit "SEND FEEDBACK", class: "button learn-more survey_button" %>
+    <% end %>
+  </div>
+
+
+  <a class="close-reveal-modal"><%= fa_icon "times-circle" %> CLOSE</a>
+</div>
