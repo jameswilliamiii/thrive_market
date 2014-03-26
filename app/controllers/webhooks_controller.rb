@@ -7,7 +7,7 @@ class WebhooksController < ApplicationController
       PhoneNumber.find_by_number(cleaned_number).update_attributes(verified: false)
       render 'stop.xml.erb', :content_type => 'text/xml'
     elsif message_from_twilio.downcase == 'start'
-      phone_number = PhoneNumber.find_or_create_by_phone_number(cleaned_number)
+      phone_number = PhoneNumber.find_or_create_by_number(cleaned_number)
       phone_number.verified = true
       phone_number.save
       render 'verified.xml.erb', :content_type => 'text/xml'
