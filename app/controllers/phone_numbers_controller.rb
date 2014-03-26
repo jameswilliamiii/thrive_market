@@ -16,7 +16,7 @@ class PhoneNumbersController < ApplicationController
     client = Twilio::REST::Client.new(ENV['TWILIO_SID'], ENV['TWILO_TOKEN'])
     client.account.sms.messages.create(
       from: ENV['TWILO_FROM'],
-      to: phone_number,
+      to: phone_number.number,
       body: "Thanks for signing up to receive Thrive updates. Please verify your number by replying START to this message."
       )
   end

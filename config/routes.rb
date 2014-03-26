@@ -5,6 +5,6 @@ ThriveMarket::Application.routes.draw do
   get  "/home" => "static_pages#home", as: :home
   get  "/thanks" => "static_pages#thanks", as: :thanks
   post "/phone_numbers" => "phone_numbers#create"
-  get  "incoming_text" => 'webhooks#incoming_text'
+  post  "webhooks/sms" => 'webhooks#incoming_text'
 
 end

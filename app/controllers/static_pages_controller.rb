@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
+    @phone_number = PhoneNumber.new
   end
 
   def thanks

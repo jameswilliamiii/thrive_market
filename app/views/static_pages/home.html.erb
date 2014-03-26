@@ -130,13 +130,13 @@
     <div class="medium-10 medium-centered columns">
       <h3 class="center">Enter your phone number to receive SMS updates</h3>
       <div class="form-wrapper phone-wrapper">
-        <%= form_tag "sms_updates" do %>
+        <%= form_for @phone_number do |f| %>
           <div class="row">
             <div class="medium-7 columns">
-              <%= telephone_field_tag :number, nil, placeholder: "XXX-XXX-XXXX", class: "large-font" %>
+              <%= f.telephone_field :number, placeholder: "(XXX) XXX XXXX", class: "large-font" %>
             </div>
             <div class="medium-5 small-12 columns end">
-              <%= submit_tag "SIGN UP", class: "button learn-more radius expand" %>
+              <%= f.submit "SIGN UP", class: "button learn-more radius expand" %>
             </div>
           </div>
         <% end %>
