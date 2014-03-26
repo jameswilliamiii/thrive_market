@@ -20,13 +20,4 @@ class PhoneNumbersController < ApplicationController
       body: "Thanks for signing up to receive Thrive updates. Please verify your number by replying START to this message."
       )
   end
-
-  def clean_phone_number(dirty_number)
-    cleaned_number = dirty_number.gsub(/\D/, '')
-    if cleaned_number.start_with? '1'
-      cleaned_number
-    else
-      "1#{cleaned_number}"
-    end
-  end
 end
