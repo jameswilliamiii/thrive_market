@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  message: MyText
+  phone_number: MyString
+  from_city: MyString
+  from_state: MyString
+
+two:
+  message: MyText
+  phone_number: MyString
+  from_city: MyString
+  from_state: MyString

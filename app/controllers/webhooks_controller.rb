@@ -12,7 +12,7 @@ class WebhooksController < ApplicationController
       phone_number.save
       render 'verified.xml.erb', :content_type => 'text/xml'
     else
-      SurveyItem.create(content: message_from_twilio, phone_number: cleaned_number)
+      SurveyItem.create(message: message_from_twilio, phone_number: cleaned_number, from_city: params['FromCity'], from_state: params['FromState'])
       render 'thanks.xml.erb', :content_type => 'text/xml'
     end
   end

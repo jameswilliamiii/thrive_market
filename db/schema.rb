@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140326043508) do
+ActiveRecord::Schema.define(version: 20140326200159) do
 
   create_table "phone_numbers", force: true do |t|
     t.string   "number"
@@ -22,5 +22,14 @@ ActiveRecord::Schema.define(version: 20140326043508) do
 
   add_index "phone_numbers", ["number"], name: "index_phone_numbers_on_number"
   add_index "phone_numbers", ["verified"], name: "index_phone_numbers_on_verified"
+
+  create_table "survey_items", force: true do |t|
+    t.text     "message"
+    t.string   "phone_number"
+    t.string   "from_city"
+    t.string   "from_state"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
