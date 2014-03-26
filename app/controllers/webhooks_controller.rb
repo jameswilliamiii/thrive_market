@@ -1,4 +1,5 @@
 class WebhooksController < ApplicationController
+  skip_before_filter :verify_authenticity_token, only: :incoming_text
   def incoming_text
     message_from_twilio = params['Body']
     cleaned_number = clean_phone_number(params['From'])
