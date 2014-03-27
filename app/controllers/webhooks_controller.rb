@@ -20,7 +20,7 @@ class WebhooksController < ApplicationController
   private
 
   def create_verified_phone_number(phone_number)
-    new_phone_number = PhoneNumber.find_or_create_by_number(cleaned_number)
+    new_phone_number = PhoneNumber.find_or_create_by_number(phone_number)
     new_phone_number.verified = true
     new_phone_number.save
   end
