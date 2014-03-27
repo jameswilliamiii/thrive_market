@@ -2,11 +2,16 @@ class PhoneNumbersController < ApplicationController
   def create
     cleaned_number = clean_phone_number(params[:phone_number][:number])
     @phone_number = PhoneNumber.find_or_create_by(number: cleaned_number)
-    if @phone_number.verified?
-      redirect_to root_url, notice: "Your number has been verified, and you will receive our updates"
-    else
-      send_verification_text(@phone_number)
-      redirect_to root_url, alert: "We have sent a text message to the number provided.  Please verify your number by replying 'START'"
+    begin
+      if @phone_number.verified?
+        redirect_to root_url, notice: "Your number has been verified, and you will receive our updates"
+      else
+        send_verification_text(@phone_number)
+        redirect_to root_url, notice: "We have sent a text message to the number provided.  Please verify your number by replying 'START'"
+      end
+    rescue Twilio::REST::RequestError => e
+      puts "ERROR: #{e.message}"
+      redirect_to root_url, alert: e.message
     end
   end
 
