@@ -10,6 +10,7 @@ class PhoneNumbersController < ApplicationController
         redirect_to root_url, notice: "We have sent a text message to the number provided.  Please verify your number by replying 'START'"
       end
     rescue Twilio::REST::RequestError => e
+      @phone_number.destroy
       puts "ERROR: #{e.message}"
       redirect_to root_url, alert: e.message
     end
