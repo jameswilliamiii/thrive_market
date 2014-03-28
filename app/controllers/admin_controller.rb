@@ -7,15 +7,15 @@ class AdminController < ApplicationController
   end
 
   def survey_items
-    @survey_items = SurveyItem.all
+    @survey_items = SurveyItem.page  params[:page]
   end
 
   def phone_numbers
-    @phone_numbers = PhoneNumber.all
+    @phone_numbers = PhoneNumber.page  params[:page]
   end
 
   def updates
-    @updates = Update.all
+    @updates = Update.page  params[:page]
   end
 
 end

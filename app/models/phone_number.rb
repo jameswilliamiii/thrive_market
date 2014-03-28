@@ -1,6 +1,7 @@
 class PhoneNumber < ActiveRecord::Base
+  default_scope { order('created_at desc') }
 
-  scope :verified, -> { where(verified: true) }
+  scope :verified, -> { where(verified: true).order('created_at desc') }
 
   def send_update(content)
     client = Twilio::REST::Client.new(ENV['TWILIO_SID'], ENV['TWILO_TOKEN'])

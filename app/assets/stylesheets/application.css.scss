@@ -23,7 +23,7 @@ body.f-topbar-fixed { padding:0;}
 div.main-wrapper {
   margin-top: 65px;
   @media #{$medium-up} {
-    padding: 20px 0;
+    padding: 20px 0 40px;
   }
 }
 
@@ -108,5 +108,8 @@ div.message-wrapper {
 div.side-nav {
   @media #{$medium-up} {
     position: fixed;
+  }
+  ul.side-nav {
+    padding-top: 0;
   }
 }
