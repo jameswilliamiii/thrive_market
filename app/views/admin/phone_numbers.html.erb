@@ -6,7 +6,25 @@
     </div>
     <div class="medium-9 columns">
       <h3>Text Message Subscribers</h3>
-
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Number</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @phone_numbers.each do |phone_number| %>
+              <tr>
+                <td><%= phone_number.created_at.strftime('%D') %></td>
+                <td><%= phone_number.number %></td>
+                <td><%= verified_or_not(phone_number).html_safe %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <%= paginate @phone_numbers %>
     </div>
   </div>
   </div>

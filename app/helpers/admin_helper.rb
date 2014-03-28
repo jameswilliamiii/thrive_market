@@ -54,4 +54,8 @@ module AdminHelper
       admin_updates_url
     end
   end
+
+  def verified_or_not(phone_number)
+    phone_number.verified ? "<span class='label success'>VERIFIED</span>" : "<span class='label alert'>UNVERIFIED</span>"
+  end
 end
