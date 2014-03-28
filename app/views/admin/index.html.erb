@@ -8,8 +8,10 @@
     </div>
     <div class="medium-9 columns">
       <h3>Create a new text message update</h3>
+      <p>Updates must be a maximum of 140 characters.</p>
       <%= form_tag do %>
         <%= text_area_tag :update, nil, rows: 3 %>
+        <div id="counter"><span class="right label">0 characters</span></div>
         <%= submit_tag "SEND UPDATE", class: "button learn-more radius" %>
       <% end %>
     </div>
