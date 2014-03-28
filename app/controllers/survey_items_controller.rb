@@ -1,4 +1,5 @@
 class SurveyItemsController < ApplicationController
+
   def create
     @survey_item = SurveyItem.new survey_item_params
     if @survey_item.save
