@@ -14,7 +14,7 @@ ThriveMarket::Application.routes.draw do
   resources :sessions, only: [ :create ]
   resources :updates,  only: [ :create, :destroy ]
 
-  get "admin/index"         => "admin#index",         as: :admin
+  get "admin"         => "admin#index",         as: :admin
   get "admin/survey_items"  => "admin#survey_items",  as: :admin_survey_items
   get "admin/phone_numbers" => "admin#phone_numbers", as: :admin_phone_numbers
   get "admin/updates"       => "admin#updates",       as: :admin_updates
