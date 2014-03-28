@@ -39,11 +39,4 @@ $(function(){ $(document).foundation();
     $.cookie('survey_seen', 'true', { expires: 1 });
   }
 
-  // Custom named patterns
-  abide : {
-        patterns: {
-          phone: /\d{10,}/
-        }
-      }
-
 });
