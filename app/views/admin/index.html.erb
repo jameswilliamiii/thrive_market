@@ -10,19 +10,6 @@
       <h3>Create a new text message update</h3>
       <p>Updates must be a maximum of 140 characters.</p>
       <%= form_for @update, html: { :"data-abide" => "" } do |f| %>
-        <div class="row">
-          <div class="medium-6 columns">
-            <%= f.label :send_date, "Date to send out update" %>
-            <%= f.date_field :send_date, required: true, pattern: "date" %>
-            <small class="error">A valid date is required.</small>
-          </div>
-        </div>
-        <div>
-          <%= f.label :send_immediately do %>
-            <%= f.check_box :send_immediately %>
-            Send immediately?
-          <% end %>
-        </div>
         <%= f.text_area :content, rows: 3, placeholder: "What do you want to say?", required: true %>
         <small class="error">Update content cannot be empty.</small>
         <div id="counter"><span class="right label secondary">0 characters</span></div>
@@ -32,6 +19,7 @@
           </div>
         </div>
       <% end %>
+
     </div>
   </div>
   </div>

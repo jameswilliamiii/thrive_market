@@ -5,7 +5,7 @@ class UpdatesController < ApplicationController
   def create
     @update = Update.new update_params
     if @update.save
-      @update.send_immediately ? redirect_to(admin_url, notice: "Your update has been sent out") : redirect_to(admin_url, notice: "You have saved a new update to send later")
+      redirect_to admin_url, notice: "Your update has been sent out"
     else
       render 'admin/index'
     end
