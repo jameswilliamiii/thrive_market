@@ -20,6 +20,11 @@ body { background-color: black; }
 
 body.f-topbar-fixed { padding:0;}
 
+div.main-wrapper {
+  margin-top: 65px;
+  padding: 30px 0;
+}
+
 .top-bar-logo {
   margin: 10px 5px 10px 5px;
 }
@@ -90,10 +95,6 @@ footer {
 div.message-wrapper {
   margin-top: 10px;
   text-align: left;
-}
-div.main-wrapper {
-  margin-top: 70px;
-  padding: 30px 0;
 }
 .cc {
   color: #888888;

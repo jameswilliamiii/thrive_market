@@ -30,15 +30,18 @@
   <body>
     <%= render 'layouts/navigation' %>
 
-    <% unless params[:action] == "home" %>
-      <div class="row">
-        <div class="medium-12 columns">
-          <%= render 'layouts/messages' %>
+    <% if params[:action] == "home" %>
+      <%= yield %>
+    <% else %>
+      <div class="main-wrapper">
+        <div class="row">
+          <div class="medium-12 columns">
+            <%= render 'layouts/messages' %>
+          </div>
         </div>
       </div>
+      <%= yield %>
     <% end %>
-
-    <%= yield %>
 
     <%= render 'layouts/footer' %>
 

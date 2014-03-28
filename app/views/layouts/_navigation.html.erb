@@ -17,6 +17,11 @@
         <li><%= link_to "SPONSORS", "#sponsors", class: "smooth" %></li>
         <li><%= link_to "CONTACT", "#contact", class: "smooth" %></li>
         <li><%= link_to "BLOG", "http://thrivemarket.tumblr.com/" %></li>
+        <% if signed_in? %>
+          <li>
+            <%= link_to "SIGN OUT", sign_out_url, method: "delete", class: "orange" %>
+          </li>
+        <% end %>
       </ul>
     </section>
   </nav>

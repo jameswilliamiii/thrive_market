@@ -55,7 +55,7 @@
 // $default-float: left;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
+$primary-color: #37C300;
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
@@ -1267,4 +1267,10 @@ $topbar-dropdown-label-bg: #222;
 .contain-to-grid {
   opacity:0.95;
   filter:alpha(opacity=95); /* For IE8 and earlier */;
+}
+.top-bar-section ul li > a.orange {
+  color: #FF852A;
+}
+.top-bar-section ul li:hover:not(.has-form) > a.orange {
+  color: darken(#FF852A, 10%);
 }
