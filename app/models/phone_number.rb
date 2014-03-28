@@ -9,5 +9,7 @@ class PhoneNumber < ActiveRecord::Base
       to: self.number,
       body: content + " You can reply STOP to be removed from these texts."
       )
+    rescue Twilio::REST::RequestError => e
+      puts "ERROR: #{e.message}, #{self.number}"
   end
 end

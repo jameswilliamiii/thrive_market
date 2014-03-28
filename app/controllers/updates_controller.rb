@@ -1,6 +1,4 @@
 class UpdatesController < ApplicationController
-  def index
-  end
 
   def create
     @update = Update.new update_params
@@ -11,13 +9,10 @@ class UpdatesController < ApplicationController
     end
   end
 
-  def edit
-  end
-
-  def update
-  end
-
   def destroy
+    @update = Update.find params[:id]
+    @update.destroy
+    redirect_to admin_updates_url, notice: "Update has been deleted"
   end
 
   private

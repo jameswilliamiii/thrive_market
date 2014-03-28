@@ -17,6 +17,12 @@ module AdminHelper
     end
   end
 
+  def li_admin_updates_url_active?
+    if params[:controller] == "admin" && params[:action] == "updates"
+      "active"
+    end
+  end
+
   def a_admin_url_active?
     if params[:controller] == "admin" && params[:action] == "index"
       "#"
@@ -38,6 +44,14 @@ module AdminHelper
       "#"
     else
       admin_survey_items_url
+    end
+  end
+
+  def a_admin_updates_url_active?
+    if params[:controller] == "admin" && params[:action] == "updates"
+      "active"
+    else
+      admin_updates_url
     end
   end
 end

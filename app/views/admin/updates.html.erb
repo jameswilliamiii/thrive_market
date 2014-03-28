@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="medium-12 columns">
+  <div class="row">
+    <div class="medium-3 columns">
+      <%= render 'side_nav' %>
+    </div>
+    <div class="medium-9 columns">
+      <h3>Past Updates</h3>
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Update</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @updates.each do |update| %>
+            <tr>
+              <td><%= update.created_at.strftime('%D') %></td>
+              <td><%= update.content %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+</div>

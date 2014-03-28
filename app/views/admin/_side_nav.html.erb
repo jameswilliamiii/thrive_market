@@ -1,11 +1,16 @@
-<ul class="side-nav">
-  <li class="<%= li_admin_url_active? %>">
-    <%= link_to "NEW UPDATE", a_admin_url_active? %>
-  </li>
-  <li class="<%= li_admin_phone_numbers_url_active? %>">
-    <%= link_to "SUBSCRIBERS", a_admin_phone_numbers_url_active? %>
-  </li>
-  <li class="<%= li_admin_survey_items_url_active? %>">
-    <%= link_to "SURVEY RESULTS", a_admin_survey_items_url_active? %>
-  </li>
-</ul>
+<div class="side-nav">
+  <ul class="side-nav">
+    <li class="<%= li_admin_url_active? %>">
+      <%= link_to "NEW UPDATE", a_admin_url_active? %>
+    </li>
+    <li class="<%= li_admin_updates_url_active? %>">
+      <%= link_to "PAST UPDATES", a_admin_updates_url_active? %>
+    </li>
+    <li class="<%= li_admin_phone_numbers_url_active? %>">
+      <%= link_to "SUBSCRIBERS", a_admin_phone_numbers_url_active? %>
+    </li>
+    <li class="<%= li_admin_survey_items_url_active? %>">
+      <%= link_to "SURVEY RESULTS", a_admin_survey_items_url_active? %>
+    </li>
+  </ul>
+</div>
