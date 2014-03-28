@@ -1,4 +1,7 @@
 class Update < ActiveRecord::Base
+
+  default_scope { order('created_at desc') }
+
   after_save :send_update
 
   def send_update
