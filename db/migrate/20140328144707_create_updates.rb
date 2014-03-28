@@ -3,6 +3,7 @@ class CreateUpdates < ActiveRecord::Migration
     create_table :updates do |t|
       t.text :content
       t.date :send_date
+      t.boolean :send_immediately
 
       t.timestamps
     end

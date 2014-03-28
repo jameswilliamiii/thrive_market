@@ -12,6 +12,7 @@ ThriveMarket::Application.routes.draw do
   delete "admin/signout" => 'sessions#destroy', as: :sign_out
 
   resources :sessions, only: [ :create ]
+  resources :updates
 
   get "admin/index"         => "admin#index",         as: :admin
   get "admin/survey_items"  => "admin#survey_items",  as: :admin_survey_items

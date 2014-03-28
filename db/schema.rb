@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20140328144707) do
   create_table "updates", force: true do |t|
     t.text     "content"
     t.date     "send_date"
+    t.boolean  "send_immediately"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

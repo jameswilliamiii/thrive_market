@@ -9,10 +9,28 @@
     <div class="medium-9 columns">
       <h3>Create a new text message update</h3>
       <p>Updates must be a maximum of 140 characters.</p>
-      <%= form_tag do %>
-        <%= text_area_tag :update, nil, rows: 3 %>
-        <div id="counter"><span class="right label">0 characters</span></div>
-        <%= submit_tag "SEND UPDATE", class: "button learn-more radius" %>
+      <%= form_for @update, html: { :"data-abide" => "" } do |f| %>
+        <div class="row">
+          <div class="medium-6 columns">
+            <%= f.label :send_date, "Date to send out update" %>
+            <%= f.date_field :send_date, required: true, pattern: "date" %>
+            <small class="error">A valid date is required.</small>
+          </div>
+        </div>
+        <div>
+          <%= f.label :send_immediately do %>
+            <%= f.check_box :send_immediately %>
+            Send immediately?
+          <% end %>
+        </div>
+        <%= f.text_area :content, rows: 3, placeholder: "What do you want to say?", required: true %>
+        <small class="error">Update content cannot be empty.</small>
+        <div id="counter"><span class="right label secondary">0 characters</span></div>
+        <div class="row">
+          <div class="medium-5 large-3 columns">
+            <%= f.submit "SEND UPDATE", class: "button learn-more radius expand" %>
+          </div>
+        </div>
       <% end %>
     </div>
   </div>
