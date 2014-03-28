@@ -31,6 +31,13 @@ $(function(){ $(document).foundation();
       return false;
   });
 
+  $(window).on("load", function () {
+      var urlHash = window.location.href.split("#")[1];
+      $('html,body').animate({
+          scrollTop: $('#' + urlHash).offset().top - 65
+      }, 20);
+  });
+
 
   // Set cookie for survey
   var cookie = $.cookie('survey_seen');
