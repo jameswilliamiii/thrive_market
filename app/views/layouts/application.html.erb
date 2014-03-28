@@ -29,8 +29,20 @@
 
   <body>
     <%= render 'layouts/navigation' %>
+
+    <% unless params[:action] == "home" %>
+      <div class="row">
+        <div class="medium-12 columns">
+          <%= render 'layouts/messages' %>
+        </div>
+      </div>
+    <% end %>
+
     <%= yield %>
+
     <%= render 'layouts/footer' %>
+
     <%= javascript_include_tag "application" %>
+
   </body>
 </html>

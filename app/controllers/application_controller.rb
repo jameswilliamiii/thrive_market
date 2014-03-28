@@ -12,4 +12,14 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def require_login
+    unless signed_in?
+      redirect_to sign_in_url, alert: "You must be signed in to access this section."
+    end
+  end
+
+  def signed_in?
+    session[:user].present?
+  end
+
 end
