@@ -3,8 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title><%= content_for?(:title) ? yield(:title) : "Thrive Neighborhood Market & Community Garden" %></title>
+    <meta name="keywords" content="DeKalb, community garden, thrive, neighborhood market, Thrive Neighborhood Market & Community Garden, St. Paul's Episcopal Church" />
+    <meta name="description" content="<%= content_for?(:desc) ? yield(:desc) : 'Cultivating community by growing affordable local produce and sharing ideas for healthy living.' %>" />
+    <meta property="og:url" content="http://thrivemarket.org">
+    <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : 'Thrive Neighborhood Market & Community Garden' %>">
+    <meta property="og:description" content="<%= content_for?(:desc) ? yield(:desc) : 'Cultivating community by growing affordable local produce and sharing ideas for healthy living.' %>">
+    <meta property="og:image" content="<%= image_tag 'background_tumblr.jpg' %>">
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag    "application" %>
