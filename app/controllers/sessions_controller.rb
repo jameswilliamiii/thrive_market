@@ -22,6 +22,6 @@ class SessionsController < ApplicationController
   private
 
   def user_authenticated?
-    params[:username] == ENV['ADMIN_USERNAME'] && params[:password] == ENV['ADMIN_PASSWORD']
+    params[:username].downcase == ENV['ADMIN_USERNAME'] && params[:password] == ENV['ADMIN_PASSWORD']
   end
 end
