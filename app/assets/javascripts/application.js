@@ -23,6 +23,21 @@ $(function(){ $(document).foundation();
     $('#nav').addClass("fixed");
     $('nav').removeClass("expanded");
   });
+
+  // Sticky footer
+  $(window).bind("load", function () {
+      var footer = $("#footer");
+      var pos = footer.position();
+      var height = $(window).height();
+      height = height - pos.top;
+      height = height - footer.height();
+      if (height > 0) {
+          footer.css({
+              'margin-top': height + 'px'
+          });
+      }
+  });
+
   // Start smooth scroll
   $('a.smooth').click(function(){
       $('html, body').animate({
@@ -45,20 +60,6 @@ $(function(){ $(document).foundation();
     $('#myModal').foundation('reveal', 'open');
     $.cookie('survey_seen', 'true', { expires: 1 });
   }
-
-  // Sticky footer
-  $(window).bind("load", function () {
-      var footer = $("#footer");
-      var pos = footer.position();
-      var height = $(window).height();
-      height = height - pos.top;
-      height = height - footer.height();
-      if (height > 0) {
-          footer.css({
-              'margin-top': height + 'px'
-          });
-      }
-  });
 
   // Character Count
   var limitnum = 140; // set your int limit for max number of characters
