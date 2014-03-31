@@ -39,6 +39,9 @@ div.home-image {
   }
   .logo {
     margin:20px 0 0;
+    @media #{$large-up} {
+      margin-top: 75px;
+    }
   }
   .learn-more {
     margin-top: 20px;
@@ -141,11 +144,11 @@ div.dates {
     p {
       margin: 0;
       color: white;
-      font-size: 2.0rem;
+      font-size: 1.8rem;
     }
   }
   .day {
-    background-color: #EEE;
+    background-color: #FAFAFA;
     padding: 20px;
     margin-bottom: 30px;
     p {
