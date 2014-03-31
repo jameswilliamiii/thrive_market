@@ -10,6 +10,7 @@
     <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : 'Thrive Neighborhood Market & Community Garden' %>">
     <meta property="og:description" content="<%= content_for?(:desc) ? yield(:desc) : 'Cultivating community by growing affordable local produce and sharing ideas for healthy living.' %>">
     <meta property="og:image" content="https://s3.amazonaws.com/thrivemarket.org/images/background_tumblr.jpg">
+    <%= favicon_link_tag 'favicon.png', :rel => 'shortcut icon' %>
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag    "application" %>
