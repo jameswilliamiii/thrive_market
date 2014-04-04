@@ -58,7 +58,7 @@ $(function(){ $(document).foundation();
   var cookie = $.cookie('survey_seen');
   if (cookie == null){
     $('#myModal').foundation('reveal', 'open');
-    $.cookie('survey_seen', 'true', { expires: 1 });
+    $.cookie('survey_seen', 'true', { expires: 14 });
   }
 
   // Character Count
