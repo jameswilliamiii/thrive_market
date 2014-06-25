@@ -80,7 +80,7 @@ $(function(){ $(document).foundation();
       $(cnt).addClass("alert");
     }
   }
-  $('textarea#update').keyup(function(){
+  $('textarea#update_content').keyup(function(){
     limits($(this), limitnum);
   });
 
