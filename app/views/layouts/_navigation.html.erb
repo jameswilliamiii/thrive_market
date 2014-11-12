@@ -33,13 +33,13 @@
             <%= link_to "SPONSORS", root_url(anchor: "sponsors"), class: "smooth" %>
           <% end %>
         </li>
-        <li>
-          <% if home? %>
-            <%= link_to "CONTACT", "#contact", class: "smooth" %>
-          <% else %>
-            <%= link_to "CONTACT", root_url(anchor: "contact"), class: "smooth" %>
-          <% end %>
-        </li>
+        <!-- <li>
+          <%# if home? %>
+            <%#= link_to "CONTACT", "#contact", class: "smooth" %>
+          <%# else %>
+            <%#= link_to "CONTACT", root_url(anchor: "contact"), class: "smooth" %>
+          <%# end %>
+        </li> -->
         <li><%= link_to "BLOG", "http://thrivemarket.tumblr.com/" %></li>
         <% if signed_in? %>
           <li><%= link_to "ADMIN", admin_url, class: "orange" %></li>
