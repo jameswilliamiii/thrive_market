@@ -137,6 +137,9 @@ div.dates {
     -moz-box-shadow:    2px 2px 2px 2px #999;
     -webkit-box-shadow: 2px 2px 2px 2px #999;
     box-shadow:         2px 2px 2px 2px #999;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .month {
     background-color: rgb(227, 103, 103);
@@ -184,4 +187,17 @@ input.large-font {
 .question {
   visibility:hidden;
   display:none;
+}
+
+.alert-box {
+  &.orange {
+    background-color: rgba(255, 133, 42, 0.8);
+    border: none;
+    a {
+      color: #0079FF;
+    }
+    .close {
+      color: #FFF;
+    }
+  }
 }
