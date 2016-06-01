@@ -1,15 +1,19 @@
 ready = ->
-  new Vivus 'cultivating_icon',
+  @cultivating = new Vivus 'cultivating_icon',
+    duration: 200
     file: '/images/cultivating.svg'
-    type: 'scenario'
+    type: 'oneByOne'
+    pathTimingFunction: Vivus.EASE_IN
   new Vivus 'community_icon',
-    duration: 100
+    duration: 200
     file: '/images/community_garden.svg'
-    type: 'scenario'
+    type: 'oneByOne'
+    pathTimingFunction: Vivus.EASE_IN
   new Vivus 'healthy_icon',
     duration: 100
     file: '/images/healthy.svg'
-    type: 'scenario'
+    type: 'oneByOne'
+    pathTimingFunction: Vivus.EASE_IN
 
 $(document).ready(ready)
 $(document).on('page:load', ready)
